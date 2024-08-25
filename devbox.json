@@ -1,10 +1,12 @@
 {
-  "packages": ["python@3.9", "poetry"],
+  "packages": {
+    "python": {
+      "version": "2.7.18.8",
+      "allow_insecure": ["python-2.7.18.8"]
+    }
+  },
   "shell": {
-    "init_hook": [
-      "poetry install",
-      "echo 'Flask development environment is ready!'"
-    ],
+    "init_hook": ". $VENV_DIR/bin/activate",
     "scripts": {
       "start": "poetry run flask run"
     }
