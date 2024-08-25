@@ -1,0 +1,12 @@
+{
+  "packages": ["python@3.9", "poetry"],
+  "shell": {
+    "init_hook": [
+      "poetry install",
+      "echo 'Flask development environment is ready!'"
+    ],
+    "scripts": {
+      "start": "poetry run flask run"
+    }
+  }
+}
